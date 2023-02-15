@@ -1,0 +1,7 @@
+{
+  "name": "waterDeliver",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
