@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "waterdeliver-677f6": {
+      "hosting": {
+        "app": [
+          "waterdeliver-677f6"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "waterdeliver-677f6"
+  }
+}
