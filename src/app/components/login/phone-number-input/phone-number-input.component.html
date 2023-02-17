@@ -1,0 +1,21 @@
+<p class="login__phoneNumber-label">
+  Por favor, ingresa tu número teléfonico (10 dígitos) para acceder a tu cuenta
+</p>
+<ion-item fill="outline">
+  <ion-label position="floating">Número de teléfonico</ion-label>
+  <ion-input
+    type="tel"
+    maxlength="10"
+    placeholder="Ej. 331448365"
+    [formControl]="phoneNumber"
+  ></ion-input>
+</ion-item>
+
+<ion-button
+  (click)="validatePhoneNumber()"
+  expand="block"
+  shape="round"
+  class="login__send-code__button"
+>
+  Continuar
+</ion-button>

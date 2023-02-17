@@ -1,0 +1,29 @@
+<p class="otp-input__label">
+  Ingrese el código que hemos enviado por mensaje.
+</p>
+<form class="otp-input__inputs__container" #inputs [formGroup]="otpForm">
+
+  <ion-input
+    type="number"
+    class="otp-input__input"
+    maxlength="1"
+    [formControlName]="i"
+    [autofocus]="i === 0"
+    (ionFocus)="onFocus(i)"
+    (ionChange)="inputChange()"
+    *ngFor="let item of [0,1,2,3,4,5]; let i = index"
+  ></ion-input>
+
+</form>
+<ion-button expand="block" fill="clear" size="small" (click)="resend.emit()">
+  Reenviar código
+</ion-button>
+
+<ion-button
+  (click)="validateOtp()"
+  expand="block"
+  shape="round"
+  class="otp-input__button"
+>
+  Continuar
+</ion-button>

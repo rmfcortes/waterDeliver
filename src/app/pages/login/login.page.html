@@ -1,4 +1,11 @@
 <ion-content>
   <div id="sign-in-button"></div>
-  <ion-input type="tel" placeholder="Awesome Input"></ion-input>
+
+  <section class="login__form__container shadow">
+    <img src="assets/images/logo.jpeg" class="login__logo">
+    <h1 class="login__welcome-label">Bienvenido</h1>
+
+    <app-phone-number-input (phone)="signInWithPhoneNumber($event)" [hidden]="step !== 0"></app-phone-number-input>
+    <app-otp-input [hidden]="step !== 1" (resend)="resendCode()" (otp)="confirmVerificationCode($event)"></app-otp-input>
+  </section>
 </ion-content>
